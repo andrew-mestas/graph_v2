@@ -127,9 +127,7 @@
 
           function resize(e){
             var width = $('body').width(); 
-            var height = $('body').height(); 
             container.attr('width', width);
-            container.attr('height', height);
             circles.data(jsonCircles)
                    .attr("cx", function (d) { return d.x_axis * (width*0.001); })
             text.data(jsonCircles)
