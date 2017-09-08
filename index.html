@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <title>D3 Graph of Obesity Study 1990-2013</title>
+</head>
+<link rel="stylesheet" href="style.css"></link>
+<link rel="stylesheet" href="Skeleton-2.0.4/css/normalize.css">
+<link rel="stylesheet" href="Skeleton-2.0.4/css/skeleton.css">
+<body>
+<h4>Global Burden of Disease 2013 Obesity Prevalence 1990-2013</h4>
+<div class="loader"></div>
+<div class="container">
+    <div class="inner">
+        <select class="selectors" id="location">
+        </select>
+
+        <div id="slidecontainer">
+            <p>Year: <span id="demo"></span></p>
+            <input type="range" min="1990" max="2013" value="1990" class="slider range" id="year">
+        </div> 
+
+        <div id="slidecontainer">
+            <p>age: <span id="demoage"></span></p>
+            <input type="range" min="0" max="18" value="0" class="slider range" id="age">
+        </div> 
+    </div>
+</div>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="instructo.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html> 
