@@ -1,5 +1,5 @@
 // Parse dataset
-    d3.csv("dataset.csv", function(data){
+    d3.csv("./dataset.csv", function(data){
         var structure = [
         {
             key: "location_name",
