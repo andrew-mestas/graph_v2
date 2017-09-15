@@ -68,6 +68,7 @@
         function getMetricCircle(circles, years, metric, gender){
             circles.data(years)
                     .attr('fill', '#2ecc71')
+                    .transition()
                     .attr('cx', function(d, i) { return x( i ) * ($('body').width()*0.001)} )
                     .attr('cy', function(d, i) { return y( Object.keys(d[metric][gender])) })
                     .attr('r',  function(d, i) { return 4 })
@@ -78,10 +79,10 @@
             var years = getYears();            
             var width = $('body').width(); 
 
-            obeseMale.attr("d", getMetricLine('obese', 'male')(years))
-            obeseFemale.attr("d", getMetricLine('obese', 'female')(years))
-            overweightMale.attr("d", getMetricLine('overweight', 'male')(years))
-            overweightFemale.attr("d", getMetricLine('overweight', 'female')(years))
+            obeseMale.transition().attr("d", getMetricLine('obese', 'male')(years))
+            obeseFemale.transition().attr("d", getMetricLine('obese', 'female')(years))
+            overweightMale.transition().attr("d", getMetricLine('overweight', 'male')(years))
+            overweightFemale.transition().attr("d", getMetricLine('overweight', 'female')(years))
             getMetricCircle(obeseMaleCircles, years, "obese", "male");
             getMetricCircle(obeseFemaleCircles, years, "obese", "female");
             getMetricCircle(overweightMaleCircles, years, "overweight", "male");
