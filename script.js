@@ -26,7 +26,6 @@
             type: "object"
         }
         ]
-
         console.log(data);
         
         var x = d3.scaleLinear().domain([0, 23]).range([100, 780]);
@@ -104,6 +103,7 @@
                 }));
             });
         }
+
         var mindate = new Date(1990,0,1),
             maxdate = new Date(2013,0,31);
             
@@ -206,6 +206,5 @@
 		    .range([100 * (width*0.001), 780 * (width*0.001) ]);   
 
             container.select(".xaxis").call(d3.axisBottom(xScale).tickFormat(d3.timeFormat("%Y")))
-
           }
         })
